@@ -1,0 +1,49 @@
+/* _content/Tiendavirtual/Views/Shared/_Layout.cshtml.rz.scp.css */
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-ef9tqzxdmm] {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a[b-ef9tqzxdmm] {
+  color: #0077cc;
+}
+
+.btn-primary[b-ef9tqzxdmm] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-ef9tqzxdmm], .nav-pills .show > .nav-link[b-ef9tqzxdmm] {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top[b-ef9tqzxdmm] {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom[b-ef9tqzxdmm] {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-ef9tqzxdmm] {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-ef9tqzxdmm] {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer[b-ef9tqzxdmm] {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px;
+}

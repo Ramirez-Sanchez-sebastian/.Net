@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Tiendavirtual.Models.Cliente>
+
+@{
+    ViewData["tabla de compra"] = "Index";
+}
+
+<!-- Estilos adicionales para el fondo -->
+<style>
+    body {
+        background-image: url('https://img.freepik.com/foto-gratis/retrato-abstracto-ojo-elegancia-mujeres-jovenes-generado-ai_188544-9712.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
+    .table-container {
+        background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con transparencia */
+        padding: 20px;
+        border-radius: 15px;
+    }
+</style>
+
+<div class="container my-5">
+    <div class="table-container">
+        <h1 class="display-4 text-primary mb-4">Lista de Clientes</h1>
+
+        <p>
+            <a asp-action="Create" class="btn btn-success mb-3">Agregar Nuevo Cliente</a>
+        </p>
+
+        <table class="table table-hover table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Nombre)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Telefono)
+                    </th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nombre)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Telefono)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.ClienteId"><i class="bi bi-pencil-fill"></i></a>
+                            <a asp-action="Details" asp-route-id="@item.ClienteId"><i class="bi bi-info-circle-fill"></i></a>
+                            <a asp-action="Delete" asp-route-id="@item.ClienteId"><i class="bi bi-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<!-- Script para asignar el ID del cliente al modal -->
+<script>
+    function setClienteId(clienteId) {
+        document.getElementById('clienteIdEliminar').value = clienteId;
+    }
+</script>
